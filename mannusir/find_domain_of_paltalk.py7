@@ -1,0 +1,4 @@
+import re
+file1=open("Video Chat _ Paltalk.html","r")
+file2=re.findall(r'..+paltalk.com',file1.read())
+print(set(file2))
