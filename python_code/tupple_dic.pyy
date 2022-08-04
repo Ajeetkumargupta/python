@@ -1,0 +1,41 @@
+#salaries={}
+#salaries[('tinku_sharma')] =10000
+#salaries[('gabbar_singh')] =20000
+#print(salaries)
+
+#i=input("enter user name: ")
+#if i in salaries:
+#	print ("tinku_sharma")
+#else:
+#	print("user not found")
+
+#print(salaries.keys())
+
+#==================================
+
+#A=(1,2,3,4,5)
+#A=('a','b','c','d','e')
+#print(A)
+#print(type(A))
+#print(len(A))
+
+
+#================================
+# sequance unpacking
+
+student=('Ajeet','Gupta',223403,'Ditiss')
+student1=('rishu','yadav',223437,'Ditiss')
+print(student)
+print(type(student))
+fname,lname,roll_no,branch = student
+print(fname)
+print(roll_no)
+fname,lname,roll_no,branch = student1
+print(fname)
+print(roll_no)
+
+
+#====================================
+
+
+

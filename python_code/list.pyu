@@ -1,0 +1,2 @@
+a=["sun","mon","tue","wed"]
+print(a[2])

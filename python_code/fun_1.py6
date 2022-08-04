@@ -1,0 +1,11 @@
+#def fun(v):
+#a=['ajeet','kumar']
+#	print(v)
+#fun(123)
+
+#===================================
+
+a={1:'ajeet',2:'kumar',3:'gupta'}
+print(a)
+print(type(a))
+print(items(a))
