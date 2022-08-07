@@ -1,0 +1,58 @@
+apt-get install mariadb-server
+mysql -u root -p 
+CREATE DATABASE IF NOT EXISTS my_db;
+USE my_db;
+CREATE TABLE user (
+	id int(5) NOT NULL AUTO-INCREMENT,
+	username varchar(30) NOT NULL,
+	password varchar(32) NOT NULL,
+	PRIMARY KEY (id),
+	UNIQUE (username)
+	);USE my_db;
+
+DESC user;
+SELECT * FROM user;
+INSERT INTO user VALUES (1,'Tinku', 'Sharma123');
+INSERT INTO user (username, password) VALUES ('Pinky','Private123');
+
+SELECT * FROM user WHERE id= 3;
+
+UPDATE user SET password='gb12345' WHERE id=3;
+
+ALTER TABLE user ADD COLUMN fname varchar(50) NOT NULL AFTER id;
+UPDATE user SET fname='Tinku', lname='Sharma' WHERE id=1;
+
+DELETE FROM user WHERE id=3;
+
+ALTER TABLE user DROP COLUMN lname;
+sudo mysqldump --user root my_db > backup.bak
+
+CREATE DATABASE IF NOT EXISTS db1 
+sudo mysql -u root -p db1 < backup.bak
+
+#=====================
+SELECT Host, User, Password, plugin FROM user;
+
+UPDATE user SET plugin= '' WHERE User='root';
+
+SELECT Host, User, Password, plugin FROM user;
+FLUSH PRIVILEGES;
+exit();
+
+systemctl restart mariadb-service
+mysql_secure_installation
+mysql -u root -p 
+
+use mysql;
+SELECT Host, User, Password, plugin FROM user;
+CREATE USER 'ditiss'@'localhost' IDENTIFIED BY 'Password1234'
+CREATE DATABASE IF NOT EXISTS db1;
+GRANT ALL PRIVILEGES ON db1.* TO 'ditiss'@'localhost';
+FLUSH PRIVILEGES;
+
+DELTE FROM mysql.user WHERE User='ditiss'
+DROP USER 'iacsd'@'localhost'
+
+GRANT ALL PRIVILEGES ON db1.* TO 'iacsd'@'localhost'
+
+REVOKE ALL PRIVILEGES ON db1.* FROM 'iacsd'@'localhost'
