@@ -1,0 +1,17 @@
+apt install python3 python3-pip python3-venv
+python3 -m venv .
+source bin/activate
+pip install flask
+python3 -c "import flask; print(flask._version_)"
+nano hello.py
+	from flask import Flask
+	app=Flask(__name__)
+	@app.route('/')
+	def home():
+		return "hello, this is our First Flask website";
+
+	if __name__=="__main__":
+		app.run()
+		#app.run(Host='0.0.0.0',port=6000)
+
+python3 hello.py

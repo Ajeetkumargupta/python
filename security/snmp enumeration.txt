@@ -1,0 +1,11 @@
+apt install snmp perl-tk -y
+cpan Term:ReadKey
+apt install libnet-snmp-perl libnumber-bytes-human-perl
+ wget http://www.nothink.org/codes/snmpcheck/snmpcheck-1.8.pl
+chmod 755 snmpcheck-1.8.pl
+
+#go win add feature snmp
+
+#service>snmp>rightclick>security>Add>public read only
+
+./snmpcheck-1.8.pl -d -t 192.168.1.155(win)

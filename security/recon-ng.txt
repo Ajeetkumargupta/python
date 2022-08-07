@@ -1,0 +1,34 @@
+dpkg-reconfigure tzdata
+apt-get install git python3-pip python3-setuptools
+
+git clone  https://github.com/lanmaster53/recon-ng
+
+cd recon-ng
+pip3 install -r REQUIREMENTS
+
+./recon-ng --version
+./recon-ng
+marketplace refresh							
+marketplace search hackertarget					
+marketplace install recon/domains-hosts/hackertarget		\\install hackertarget
+modules load recon/domains-hosts/hackertarget			\\load hackertarget to racon-ng
+
+info								
+options set SOURCE checkpoint.com				\\to set the domain checkpoint as target
+
+run								\\to run the recon-ng
+dashboard		\\to see dashboard
+show hosts		\\to see captured ip
+back
+
+marketplace search csv
+marketplace install reporting/csv
+modules load reporting/csv
+	info
+	run	
+#save all detail in given path
+#collect all ip
+cat /root/.recon-ng/workspaces/default/results.csv | cut -d '"' -f4 | sort -u
+
+
+-------------------------------------------------------
