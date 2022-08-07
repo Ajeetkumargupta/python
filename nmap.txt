@@ -1,0 +1,31 @@
+NMAP
+
+nmap -O -v 192.168.1.144	\\to dtect the os of the host trget 
+
+nmap -O -v 192.168.1.0/24 	\\to give the open ports if the hosts in the network
+
+nmap -sT -v 192.168.1.0/24	\\to scan the tcp ports in the network
+
+nmap -sS -v 192.168.1.0/24	\\default scan 
+ 
+nmap -sU -v 192.168.1.0/24 	\\to scan the udp ports in network
+
+nmap -sA -v 192.168.1.0/24	\\to scan tcp ack port scan
+
+
+nmap -sW -v 192.168.1.0/24	\\ to scan windows port 
+
+nmap -sL -v 192.168.1.0/24	\\to list target 
+
+nmap -sn -v 192.168.1.0/24	\host scanning
+
+nmap -Pn -v 192.168.1.0/24	\\port scanning
+
+nmap  -v -PS25,28 192.168.1.0/24 	\\tcp syn discovery
+
+nmap -PA22-25 -v 192.168.1.0/24		\\tcp ack discovery 
+
+nmap -PU22-25 -v 192.168.1.0/24 	\\tcp udp discovery
+
+nmap -PR 192.168.1.0/24		\\arp discovery
+
